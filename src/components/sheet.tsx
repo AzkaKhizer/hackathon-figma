@@ -33,10 +33,10 @@ export function SheetSide() {
             
           <ul >
                 <li className="text-[16px] grid grid-cols-1 gap-y-4  font-semibold">
-                    <Link  href={""} className="text-black"><NavigationMenuDemo/></Link>
-                    <Link className="ml-4 text-black"href={""}>On Sale</Link>
-                    <Link className="ml-4 text-black"href={""}>New Arrivals</Link>
-                    <Link className="ml-4 text-black"href={""}>Brands</Link>
+                    <Link className= href={"/"} className="text-black mr-60"><NavigationMenuDemo/></Link>
+                    <Link className="ml-4 text-black"href={"/products/sell"}>On Sale</Link>
+                    <Link className="ml-4 text-black"href={/"products"}>New Arrivals</Link>
+                    <Link className="ml-4 text-black"href={"/casual"}>Brands</Link>
                 </li>
             </ul>
             
