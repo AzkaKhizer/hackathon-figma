@@ -47,7 +47,70 @@ const product: Iproducts[] = [
     img3: "/img3.png",
     img4: "/img4.png",
   },
-  // ... Other products
+  {
+        title:"Skinny Fit Jeans",
+        price:"$240",
+        id:2,
+        old_price:"$260",
+        img_url:"/product2.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Checkered Shirt",
+        price:"$180",
+        id:3,
+        img_url:"/product3.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Sleeve Striped T-shirt",
+        price:"$130",
+        id:4,
+        old_price:"$280",
+        img_url:"/product4.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Vertical Striped Shirt",
+        price:"$212",
+        id:5,
+        old_price:"$232",
+        img_url:"/topselling1.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Courage Graphic T-shirt",
+        price:"$145",
+        id:6,
+        
+        img_url:"/topselling2.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Loose Fit Bermuda Shorts",
+        price:"$80",
+        id:7,
+        img_url:"/topselling3.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    }
 ];
 
 const star = Array(5).fill(null).map((_, index) => <FaStar key={index} />);
