@@ -11,7 +11,7 @@ interface Iproducts {
     img_url: string;
 }
 
-// Use const instead of let
+
 const product: Iproducts[] = [
     {
         title: "Polo with Contrast Trims",
@@ -41,7 +41,7 @@ const product: Iproducts[] = [
     }
 ];
 
-// Use const instead of let
+
 const star = [
     <FaStar key={1} />,
     <FaStar key={2} />,
