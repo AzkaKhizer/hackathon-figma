@@ -28,20 +28,20 @@ import {
           <AccordionTrigger className="text-gray-400 text-[16px] font-normal">Formal</AccordionTrigger>
           <AccordionContent>
             Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
+            components.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger className="text-gray-400 text-[16px] font-normal">Party</AccordionTrigger>
           <AccordionContent>
-            Yes. It's animated by default, but you can disable it if you prefer.
+            Yes. It is animated by default, but you can disable it if you prefer.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger className="text-gray-400 text-[16px] font-normal">Gym</AccordionTrigger>
           <AccordionContent>
             Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
+            components.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
