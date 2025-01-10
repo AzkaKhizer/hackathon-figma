@@ -1,0 +1,151 @@
+import { FaStar } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+
+interface Iproducts{
+    title:string,
+    price:string,
+    id:number,
+    rating?:string,
+    old_price?:string,
+    img_url:string,
+    img1:string,
+    img2:string,
+    img3:string,
+    img4:string
+}
+
+let product:Iproducts[]=[
+    {
+        title:"Gradient Graphic T-shirt",
+        price:"$145",
+        id:10,
+        
+        img_url:"/new3.png",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Polo with Tipping Details",
+        price:"$180",
+        id:11,
+        img_url:"/new2.png",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Black Striped T-shirt",
+        price:"$120",
+        id:12,
+        old_price:"$150",
+        img_url:"/new1.png",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Skinny Fit Jeans",
+        price:"$240",
+        id:2,
+        old_price:"$260",
+        img_url:"/product2.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Checkered Shirt",
+        price:"$180",
+        id:3,
+        img_url:"/product3.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Sleeve Striped T-shirt",
+        price:"$130",
+        id:4,
+        old_price:"$280",
+        img_url:"/product4.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Vertical Striped Shirt",
+        price:"$212",
+        id:5,
+        old_price:"$232",
+        img_url:"/topselling1.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Courage Graphic T-shirt",
+        price:"$145",
+        id:6,
+        
+        img_url:"/topselling2.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+    {
+        title:"Loose Fit Bermuda Shorts",
+        price:"$80",
+        id:7,
+        img_url:"/topselling3.jpg",
+        img1:"/img1.png",
+        img2:"/img2.png",
+        img3:"/img3.png",
+        img4:"/img4.png"
+    },
+   
+]
+let star=[<FaStar />,<FaStar />,<FaStar />,<FaStar />,<FaStar />]
+
+export default function CasualShirts(){
+    return(
+        <div className="mt-14 w-full h-full md:h-[500px] max-w-screen-2xl  mx-auto">
+            <h1 className="text-[32px] md:text-[32px] font-bold pl-9 md:pl-10 ">Casual</h1>
+            <div className="md:w-[1000px] flex flex-wrap flex-col md:flex-row justify-center items-center md:justify-between md:px-10 mt-10 gap-3">
+                {
+                    product.map((data)=>{
+                        return (
+                            <div key={data.id}>
+                                <Link href={`/products/${data.id}`}>
+                                <div className="w-[295px] h-[298px] bg-[#F0EEED] rounded-[20px]">
+                                <Image src={data.img_url} alt={data.title} width={295} height={298} className="rounded-[20px]"></Image>
+                                </div>
+                                </Link>
+                                <div>
+                                <p className="text-[16x] md:text-[20px] font-semibold mt-2">{data.title}</p>
+                                <p className="flex text-[#FFC633]">{star}</p>
+                                <p className="text-[20px] md:text-[24px] font-bold mt-1">{data.price} <span className="text-gray-400 line-through font-semibold">{data.old_price} </span></p>
+                                </div>
+                              
+                            </div>
+                        )
+                    })
+                }
+                
+            </div>
+            <div className="flex justify-center items-center rounded-[40px]">
+                                <button className="bg-white border border-gray-300 px-16 py-4 mt-10 rounded-[40px] text-black ">View All</button>
+                               </div>
+            <div className="border-t border-gray-300 my-10"></div>
+        </div>
+    )
+}

@@ -1,14 +1,27 @@
-import Image from "next/image";
-import Headertop from "@/components/header-top";
-import Header from "@/components/Header"
+
+
 import Hero from "@/components/Hero";
+import Fonts from "@/components/fonts";
+import Products from "./products/page";
+import TopSelling from "./products/sell";
+import Dress from "@/components/dress";
+import CustomerCarousel from "@/components/carousel";
+
+
+
 
 export default function Home() {
   return (
     <div >
-      <Headertop/>
-      <Header/>
+      
       <Hero/>
+      <Fonts/>
+      <Products/>
+      <TopSelling/>
+      <Dress/>
+      <CustomerCarousel/>
+      
+      
     </div>
   );
 }

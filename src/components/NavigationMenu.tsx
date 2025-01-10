@@ -15,51 +15,55 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { title: string; href: string;  }[] = [
   
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    title: "Home",
+    href: "/",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "New Arrivals",
+    href: "/products",
+   
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    title: "Top Selling",
+    href: "/products/sell",
+   
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Casual",
+    href: "/casual",
+    
   },
 ]
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="max-w-screen-2xl  mx-auto">
       <NavigationMenuList>
         
         <NavigationMenuItem>
-          <NavigationMenuTrigger ><h2 className="text-[16px] font-semibold ">Shop</h2></NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuTrigger ><h2 className="text-[16px] md:text-[18px]  font-semibold ">Shop</h2></NavigationMenuTrigger>
+          <NavigationMenuContent className="bg-white text-black">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              
               {components.map((component) => (
+                <Link href="/">
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  
                 </ListItem>
+                </Link>
+                
               ))}
+              
+              
+                
+            
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -79,7 +83,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors bg-white text-black hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
