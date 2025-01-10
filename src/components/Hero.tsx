@@ -41,7 +41,7 @@ export default function Hero() {
       <Image src="/Rectangle2.png" className=' w-full h-full object-cover' alt="clothing" width={390} height={448}  />
       </div>
 
-     <div>
+     <div className='max-w-screen-2xl  mx-auto'>
       <Image src="/Vector-3.png" className=' absolute top-[700px] right-[1px] md:top-[150px] md:right-[50px] w-[66px] h-[66px] md:w-[104px] md:h-[104px] ' alt="star" width={104} height={104}/>
      </div>
      <div>
